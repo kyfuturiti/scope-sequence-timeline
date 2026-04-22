@@ -23,12 +23,15 @@
     .ss-focus-card .fc-ev { font-size: 0.78em; color: #64748B; font-style: italic; }
     .ss-connector { height: 3px; flex: 1; }
     .ss-phase-label { text-align: center; padding: 4px 2px; font-size: 0.72em; font-weight: 600; }
+    .ss-phase-label .full { display: inline; }
+    .ss-phase-label .short { display: none; }
     @media (max-width: 520px) {
-      .ss-grade-btn { width: 36px; height: 36px; font-size: 0.68em; border-width: 2px; }
+      .ss-grade-btn { width: 38px; height: 38px; font-size: 0.7em; border-width: 2px; }
       .ss-grade-btn.active { transform: scale(1.1); }
-      .ss-phase-label { font-size: 0.52em; word-break: break-word; line-height: 1.2; }
+      .ss-phase-label { font-size: 0.58em; line-height: 1.2; padding: 3px 0; }
+      .ss-phase-label .full { display: none; }
+      .ss-phase-label .short { display: inline; }
       .ss-connector { display: none; }
-      .ss-phase-row td { padding: 2px 1px; }
       .ss-focus-card { padding: 0.7rem 0.8rem; }
       .ss-focus-card .fc-title { font-size: 0.82em; }
       .ss-focus-card .fc-obj { font-size: 0.78em; }
@@ -55,13 +58,13 @@
           <td style="padding: 0 0 4px; vertical-align: middle;"><div style="display: flex; align-items: center;"><div class="ss-connector" style="background: #7B3FD4;"></div><div class="ss-grade-btn hs" data-grade="12" onclick="ssToggleGrade(12)">12th</div><div style="flex: 1;"></div></div></td>
         </tr>
         <tr class="ss-phase-row">
-          <td class="ss-phase-label" style="color: #2B4EE8;">Exploration</td>
-          <td class="ss-phase-label" style="color: #2B4EE8;">Preparation</td>
-          <td class="ss-phase-label" style="color: #2B4EE8;">Application</td>
-          <td class="ss-phase-label" style="color: #7B3FD4;">Investigation</td>
-          <td class="ss-phase-label" style="color: #7B3FD4;">Connection</td>
-          <td class="ss-phase-label" style="color: #7B3FD4;">Decision</td>
-          <td class="ss-phase-label" style="color: #7B3FD4;">Action</td>
+          <td class="ss-phase-label" style="color: #2B4EE8;"><span class="full">Exploration</span><span class="short">Explore</span></td>
+          <td class="ss-phase-label" style="color: #2B4EE8;"><span class="full">Preparation</span><span class="short">Prepare</span></td>
+          <td class="ss-phase-label" style="color: #2B4EE8;"><span class="full">Application</span><span class="short">Apply</span></td>
+          <td class="ss-phase-label" style="color: #7B3FD4;"><span class="full">Investigation</span><span class="short">Investigate</span></td>
+          <td class="ss-phase-label" style="color: #7B3FD4;"><span class="full">Connection</span><span class="short">Connect</span></td>
+          <td class="ss-phase-label" style="color: #7B3FD4;"><span class="full">Decision</span><span class="short">Decide</span></td>
+          <td class="ss-phase-label" style="color: #7B3FD4;"><span class="full">Action</span><span class="short">Act</span></td>
         </tr>
       </table>
       <div id="ss-detail-panel" class="ss-detail-panel" style="margin-top: 0.75rem;"></div>
